@@ -55,7 +55,8 @@ $(document).ready(function(){
             $(".assinaturas-error").fadeIn();
           }
         } else {
-
+          $(".formulario").empty();
+          $(".formulario").append("<h1>Assinatura criada com sucesso.</h1>");
         }
     });
   });
@@ -78,26 +79,31 @@ function createField(id, label) {
 };
 
 function buildForm(assinaturas) {
-  $(assinaturas).append("<h5>Informações Pessoais</h5>")
-  $(assinaturas).append(createField("fullname", "Nome: "));
-  $(assinaturas).append(createField("email", "E-mail: "));
-  $(assinaturas).append(createField("cpf", "CPF: "));
+  var div = document.createElement("div");
+  $(div).attr("class", "formulario");
 
-  $(assinaturas).append("Nascimento: <br><input type='text' id='birthdate_day' /> / ");
-  $(assinaturas).append("<input type='text' id='birthdate_month' /> / ");
-  $(assinaturas).append("<input type='text' id='birthdate_year' />");
+  $(div).append("<h5>Informações Pessoais</h5>")
+  $(div).append(createField("fullname", "Nome: "));
+  $(div).append(createField("email", "E-mail: "));
+  $(div).append(createField("cpf", "CPF: "));
 
-  $(assinaturas).append("<label>Telefone: <br>(<input type='text' id='ddd' />) <input type='text' id='phone' /></label>");
-  $(assinaturas).append("<label>Rua <br><input type='text' id='rua' /> Número <input type='text' id='numero' /></label>");
-  $(assinaturas).append(createField("bairro", "Bairro: "));
-  $(assinaturas).append(createField("cep", "CEP: "));
-  $(assinaturas).append(createField("cidade", "Cidade: "));
-  $(assinaturas).append(createField("estado", "Estado: "));
-  $(assinaturas).append("<h5>Dados de cobrança</h5>")
-  $(assinaturas).append(createField("holder_name", "Nome no cartão: "));
+  $(div).append("Nascimento: <br><input type='text' id='birthdate_day' /> / ");
+  $(div).append("<input type='text' id='birthdate_month' /> / ");
+  $(div).append("<input type='text' id='birthdate_year' />");
 
-  $(assinaturas).append("<label>Expiração do cartão: <br><input type='text' id='expiration_month'/> / <input type='text' id='expiration_year' /></label>");
-  $(assinaturas).append(createField("credit_card", "Cartão: "));
+  $(div).append("<label>Telefone: <br>(<input type='text' id='ddd' />) <input type='text' id='phone' /></label>");
+  $(div).append("<label>Rua <br><input type='text' id='rua' /> Número <input type='text' id='numero' /></label>");
+  $(div).append(createField("bairro", "Bairro: "));
+  $(div).append(createField("cep", "CEP: "));
+  $(div).append(createField("cidade", "Cidade: "));
+  $(div).append(createField("estado", "Estado: "));
+  $(div).append("<h5>Dados de cobrança</h5>")
+  $(div).append(createField("holder_name", "Nome no cartão: "));
+
+  $(div).append("<label>Expiração do cartão: <br><input type='text' id='expiration_month'/> / <input type='text' id='expiration_year' /></label>");
+  $(div).append(createField("credit_card", "Cartão: "));
+
+  $(assinaturas).append(div);
 }
 
 var build_customer = function() {

@@ -8,6 +8,7 @@
     <meta name="author" content="">
 
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
     <style type="text/css">
       html,
       body {
@@ -67,11 +68,64 @@
 
       <div class="container">
         <div class="page-header">
-          <h1>Gammer Pack</h1>
+          <h1>Gammer Packs</h1>
         </div>
         <p class="lead">Receba todo mês um super jogo(PS3 / Xbox / Wii) na sua casa.</p>
 
-        <div id="siteapps"></div>
+
+        <table id="pricetable">
+        <thead>
+          <tr>
+            <th class="side">&nbsp;</th>
+            <th class="choiceA">R$ 1000</th>
+            <th class="choiceB">R$ 100</th>
+            <th class="choiceC on">R$ 10</th>
+            <th class="choiceD">$1</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td class="side">&nbsp;</td>
+            <td class="choiceA"><a href="#"><img src="img/choose.gif" alt="Choose" /></a></td>
+            <td class="choiceB"><a href="#"><img src="img/choose.gif" alt="Choose" /></a></td>
+            <td class="choiceC on"><div class="siteapps"></div></td>
+            <td class="choiceD"><a href="#"><img src="img/choose.gif" alt="Choose" /></a></td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <td class="side">Number of quarters</td>
+            <td class="choiceA">4,000</td>
+            <td class="choiceB">400</td>
+            <td class="choiceC on">40</td>
+            <td class="choiceD">4</td>
+          </tr>
+          <tr>
+            <td class="side">Number of zeros</td>
+            <td class="choiceA">3 zeros</td>
+            <td class="choiceB">2 zeros</td>
+            <td class="choiceC on">1 zero</td>
+            <td class="choiceD">No zeros</td>
+          </tr>
+          <tr>
+            <td class="side">Checks on this row</td>
+            <td class="choiceA"><img src="img/check.png" alt="yes" /></td>
+            <td class="choiceB"><img src="img/check.png" alt="yes" /></td>
+            <td class="choiceC on"><img src="img/check.png" alt="yes" /></td>
+            <td class="choiceD"><img src="img/check.png" alt="yes" /></td>
+          </tr>
+          <tr>
+            <td class="side">Checks on another row</td>
+            <td class="choiceA"><img src="img/check.png" alt="yes" /></td>
+            <td class="choiceB"><img src="img/check.png" alt="yes" /></td>
+            <td class="choiceC on">&nbsp;</td>
+            <td class="choiceD">&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
       </div>
       <div id="push"></div>
     </div>
@@ -84,18 +138,6 @@
 
 
     <script src="js/jquery.js"></script>
-    <!--script src="js/bootstrap-transition.js"></script>
-    <script src="js/bootstrap-alert.js"></script>
-    <script src="js/bootstrap-modal.js"></script>
-    <script src="js/bootstrap-dropdown.js"></script>
-    <script src="js/bootstrap-scrollspy.js"></script>
-    <script src="js/bootstrap-tab.js"></script>
-    <script src="js/bootstrap-tooltip.js"></script>
-    <script src="js/bootstrap-popover.js"></script>
-    <script src="js/bootstrap-button.js"></script>
-    <script src="js/bootstrap-collapse.js"></script>
-    <script src="js/bootstrap-carousel.js"></script>
-    <script src="js/bootstrap-typeahead.js"></script -->
 
   </body>
 </html>
