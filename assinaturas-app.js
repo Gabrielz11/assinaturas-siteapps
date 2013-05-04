@@ -80,6 +80,7 @@ function createField(id, label) {
 };
 
 function buildForm(assinaturas) {
+  $(assinaturas).append("<h5>Informações Pessoais</h5>")
   $(assinaturas).append(createField("fullname", "Nome: "));
   $(assinaturas).append(createField("email", "E-mail: "));
   $(assinaturas).append(createField("cpf", "CPF: "));
@@ -94,6 +95,7 @@ function buildForm(assinaturas) {
   $(assinaturas).append(createField("cep", "CEP: "));
   $(assinaturas).append(createField("cidade", "Cidade: "));
   $(assinaturas).append(createField("estado", "Estado: "));
+  $(assinaturas).append("<h5>Dados de cobrança</h5>")
   $(assinaturas).append(createField("holder_name", "Nome no cartão: "));
   $(assinaturas).append(createField("expiration_month", "Expiracao mes: "));
   $(assinaturas).append(createField("expiration_year", "Expiracao ano: "));

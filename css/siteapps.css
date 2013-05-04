@@ -19,3 +19,7 @@
 .assinaturas-assinar {
   cursor: pointer;
 }
+
+#birthdate_day, #birthdate_month, #birthdate_year {
+  width: 30px;
+}
