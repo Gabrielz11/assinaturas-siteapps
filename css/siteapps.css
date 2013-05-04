@@ -27,6 +27,6 @@
 
 
 
-#birthdate_day, #birthdate_month, #birthdate_year, #ddd, #numero {
+#birthdate_day, #birthdate_month, #birthdate_year, #ddd, #numero, #expiration_month, #expiration_year {
   width: 30px;
 }

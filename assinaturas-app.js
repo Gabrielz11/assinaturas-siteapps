@@ -47,16 +47,15 @@ $(document).ready(function(){
             .with_new_customer(customer)
             .with_plan_code("[%plan_code%]")
     ).callback(function(response){
-        if (!response.has_errors()) {
-            alert("Assinado");
-        } else {
-          console.log(response);
+        if (response.has_errors()) {
           $(".assinaturas-error").empty();
           for (i = 0; i < response.errors.length; i++) {
             var erro = response.errors[i].description;
             $(".assinaturas-error").append("<p>" + erro + "</p>");
             $(".assinaturas-error").fadeIn();
           }
+        } else {
+
         }
     });
   });
@@ -90,16 +89,14 @@ function buildForm(assinaturas) {
 
   $(assinaturas).append("<label>Telefone: <br>(<input type='text' id='ddd' />) <input type='text' id='phone' /></label>");
   $(assinaturas).append("<label>Rua <br><input type='text' id='rua' /> Número <input type='text' id='numero' /></label>");
-  $(assinaturas).append(createField("rua", "Rua: "));
-  $(assinaturas).append(createField("numero", "Número: "));
   $(assinaturas).append(createField("bairro", "Bairro: "));
   $(assinaturas).append(createField("cep", "CEP: "));
   $(assinaturas).append(createField("cidade", "Cidade: "));
   $(assinaturas).append(createField("estado", "Estado: "));
   $(assinaturas).append("<h5>Dados de cobrança</h5>")
   $(assinaturas).append(createField("holder_name", "Nome no cartão: "));
-  $(assinaturas).append(createField("expiration_month", "Expiracao mes: "));
-  $(assinaturas).append(createField("expiration_year", "Expiracao ano: "));
+
+  $(assinaturas).append("<label>Expiração do cartão: <br><input type='text' id='expiration_month'/> / <input type='text' id='expiration_year' /></label>");
   $(assinaturas).append(createField("credit_card", "Cartão: "));
 }
 
