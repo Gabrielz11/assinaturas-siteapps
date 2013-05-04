@@ -20,6 +20,12 @@ $(document).ready(function(){
 
   buildForm(container);
 
+  var criar_assinatura = document.createElement("button");
+  $(criar_assinatura).text("Assinar");
+  $(criar_assinatura).attr("id","criar-assinatura");
+
+  $(container).append(criar_assinatura);
+
   $(assinaturas).append(container);
 
   var assinar = document.createElement("img");
@@ -31,7 +37,8 @@ $(document).ready(function(){
 
   $(assinaturas).append(assinar);
 
-  $(assinar).click(function(){
+  $(criar_assinatura).click(function(){
+    console.log("TESTE ....");
     var moip = new MoipAssinaturas("[%token%]");
     var customer = build_customer();
     var subscription_code = new Date().getTime();
