@@ -16,10 +16,17 @@
   display: none;
 }
 
+.assinaturas-container h5 {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
 .assinaturas-assinar {
   cursor: pointer;
 }
 
-#birthdate_day, #birthdate_month, #birthdate_year {
+
+
+#birthdate_day, #birthdate_month, #birthdate_year, #ddd {
   width: 30px;
 }

@@ -25,7 +25,6 @@ $(document).ready(function(){
   $(criar_assinatura).attr("id","criar-assinatura");
 
   $(container).append(criar_assinatura);
-
   $(assinaturas).append(container);
 
   var assinar = document.createElement("img");
@@ -38,7 +37,6 @@ $(document).ready(function(){
   $(assinaturas).append(assinar);
 
   $(criar_assinatura).click(function(){
-    console.log("TESTE ....");
     var moip = new MoipAssinaturas("[%token%]");
     var customer = build_customer();
     var subscription_code = new Date().getTime();
@@ -84,11 +82,12 @@ function buildForm(assinaturas) {
   $(assinaturas).append(createField("fullname", "Nome: "));
   $(assinaturas).append(createField("email", "E-mail: "));
   $(assinaturas).append(createField("cpf", "CPF: "));
-  $(assinaturas).append(createField("birthdate_day", "Nascimento: "));
-  $(assinaturas).append(createField("birthdate_month", "Nascimento: "));
-  $(assinaturas).append(createField("birthdate_year", "Nascimento: "));
-  $(assinaturas).append(createField("ddd", "DDD: "));
-  $(assinaturas).append(createField("phone", "Telefone: "));
+
+  $(assinaturas).append("Nascimento: <input type='text' id='birthdate_day' /> / ");
+  $(assinaturas).append("<input type='text' id='birthdate_month' /> / ");
+  $(assinaturas).append("<input type='text' id='birthdate_year' />");
+
+  $(assinaturas).append("Telefone: (<input type='text' id='ddd' />) <input type='text' id='phone' />");
   $(assinaturas).append(createField("rua", "Rua: "));
   $(assinaturas).append(createField("numero", "Número: "));
   $(assinaturas).append(createField("bairro", "Bairro: "));
