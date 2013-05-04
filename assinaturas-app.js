@@ -24,6 +24,11 @@ $(document).ready(function(){
 
   var assinar = document.createElement("img");
   $(assinar).attr("src", "http://empregonamira.com.br/assets/button.png");
+  $(assinar).attr("class", "assinaturas-assinar");
+  $(assinar).click(function() {
+    $(".assinaturas-container").modal();
+  });
+
   $(assinaturas).append(assinar);
 
   $(assinar).click(function(){
