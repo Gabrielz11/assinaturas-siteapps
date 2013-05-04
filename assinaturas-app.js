@@ -69,9 +69,10 @@ $(document).ready(function(){
 function createField(id, label) {
   var labelForm = document.createElement("label");
   $(labelForm).text(label);
-
+  $(labelForm).append("<br>");
   var el = document.createElement("input");
   $(el).attr("id", id);
+  $(el).attr("type", "text");
 
   $(labelForm).append(el);
   return labelForm;
@@ -83,11 +84,12 @@ function buildForm(assinaturas) {
   $(assinaturas).append(createField("email", "E-mail: "));
   $(assinaturas).append(createField("cpf", "CPF: "));
 
-  $(assinaturas).append("Nascimento: <input type='text' id='birthdate_day' /> / ");
+  $(assinaturas).append("Nascimento: <br><input type='text' id='birthdate_day' /> / ");
   $(assinaturas).append("<input type='text' id='birthdate_month' /> / ");
   $(assinaturas).append("<input type='text' id='birthdate_year' />");
 
-  $(assinaturas).append("Telefone: (<input type='text' id='ddd' />) <input type='text' id='phone' />");
+  $(assinaturas).append("<label>Telefone: <br>(<input type='text' id='ddd' />) <input type='text' id='phone' /></label>");
+  $(assinaturas).append("<label>Rua <br><input type='text' id='rua' /> Número <input type='text' id='numero' /></label>");
   $(assinaturas).append(createField("rua", "Rua: "));
   $(assinaturas).append(createField("numero", "Número: "));
   $(assinaturas).append(createField("bairro", "Bairro: "));
