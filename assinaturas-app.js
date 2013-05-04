@@ -1,6 +1,9 @@
 $(document).ready(function(){
   $.getScript("https://sandbox.moip.com.br/moip-assinaturas.min.js");
+  $.getScript("http://brenooliveira.github.io/assinaturas-siteapps-demo/js/jquery.simplemodal.js");
+  $.getScript("http://brenooliveira.github.io/assinaturas-siteapps-demo/js/jquery.simplemodal.js");
   $('head').append('<link rel="stylesheet" href="http://brenooliveira.github.io/assinaturas-siteapps-demo/css/siteapps.css" type="text/css" />');
+  $('head').append('<link rel="stylesheet" href="http://brenooliveira.github.io/assinaturas-siteapps-demo/css/basic.css"  type="text/css" />');
 
   var assinaturas = document.createElement("div");
   $(assinaturas).attr("class", "assinaturas");
